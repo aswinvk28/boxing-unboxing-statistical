@@ -6,4 +6,12 @@ WORKDIR $HOME/Documents/Articles/Blogathon/boxing-unboxing
 RUN pwd
 COPY get-pip.py .
 RUN python3 ./get-pip.py
+RUN apt-get install openssh-server -y
 RUN pip3 install cvxpy imageio numpy scipy scikit-learn matplotlib pandas
+RUN pip3 install jupyter
+
+RUN mkdir /home/project
+WORKDIR /home/project
+COPY boxing-unboxing.ipynb .
+
+ENTRYPOINT "/bin/bash"
