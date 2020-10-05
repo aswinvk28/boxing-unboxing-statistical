@@ -1,7 +1,9 @@
 version: '3'
 services:
   tensorflow:
-    build: ./Dockerfile.App
+    build: 
+      context: .
+      dockerfile: Dockerfile.App
     container_name: tensorflow
     ports:
       - "6080:80"
@@ -9,11 +11,11 @@ services:
       - .:/home/project
     networks:
       static-network:
-        ipv4_address: 172.20.0.2
+        ipv4_address: 172.30.0.2
 networks:
   static-network:
     ipam:
       config:
-        - subnet: 172.20.0.0/16
+        - subnet: 172.30.0.0/16
           #docker-compose v3+ do not use ip_range
           ip_range: 192.168.0.1/24
