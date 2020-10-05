@@ -51,5 +51,5 @@ denominator = Boxing::weightedSum
 constraints = DMU::constraints
 
 post
-    DEA::Maximize(numerator, denominator)
+    DEA::Minimize(numerator, denominator, constraints)
 

@@ -9,6 +9,7 @@ RUN python3 ./get-pip.py
 RUN apt-get install openssh-server -y
 RUN pip3 install cvxpy imageio numpy scipy scikit-learn matplotlib pandas
 RUN pip3 install jupyter
+RUN pip3 install seaborn
 
 RUN mkdir /home/project
 WORKDIR /home/project
