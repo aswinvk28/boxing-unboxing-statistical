@@ -1,5 +1,5 @@
-BOXING AND UNBOXING (STATISTICAL)
----------------------------------
+Boxing and Unboxing of Statistical Models with Gaussian Learning
+----------------------------------------------------------------
 
 **Heatmaps Obtained**
 
